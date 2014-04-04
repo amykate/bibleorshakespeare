@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bible or Shakespeare?</title>
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- link href="css/custom.css" rel="stylesheet" media="screen" -->
+  </head>
+  <body>
+
+    <script src="http://code.jquery.com/jquery.js"></script -->
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+<script>
+ //google analytics
+</script>
+    <script type="text/javascript">
+    $( document ).ready(function() {
+
+     
+
+    </script>
+
+
+      <div class="container">
+
+      <div class="page-header">
+            <h1>Bible or Shakespeare?</h1>
+        <p class="lead">Who said it?</p>
+      </div>
+
+      
+
+  <script id="source" language="javascript" type="text/javascript">
+
+  $(function () 
+  {
+    //-----------------------------------------------------------------------
+    // 2) Send a http request with AJAX http://api.jquery.com/jQuery.ajax/
+    //-----------------------------------------------------------------------
+    $.ajax({                                      
+      url: 'api.php',                  //the script to call to get data          
+      data: "",                        //you can insert url argumnets here to pass to api.php
+                                       //for example "id=5&parent=6"
+      dataType: 'json',                //data format      
+      success: function(data)          //on recieve of reply
+      {
+        var id = data[0];              //get id
+        var vname = data[1];           //get name
+        //--------------------------------------------------------------------
+        // 3) Update html content
+        //--------------------------------------------------------------------
+        $('#output').html("<b>id: </b>"+id+"<b> name: </b>"+vname); //Set output element html
+        //recommend reading up on jquery selectors they are awesome 
+        // http://api.jquery.com/category/selectors/
+      } 
+    });
+  }); 
+
+  </script>
+      
+
+    <div class="row">
+      <div class="span12" id="quote"><p class="quote"><h3>the quote</h3></p><br/><br/></div>
+    </div>
+    <div class="row">
+    </div>
+    <div class="row">
+      <div class="span5" id="Bible">Bible</div>
+      <div class="span2" id="result3">Or</div>
+      <div class="span5" id="Shakespeare">Shakespeare</div>
+    </div>
+
+
+      </div>
+
+  </body>
+</html>
